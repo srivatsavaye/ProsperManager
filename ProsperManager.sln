@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prosper.Library", "ProsperLibrary\Prosper.Library.csproj", "{E4E39A98-DFCF-4513-9F73-0A41D56CE5C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{E4D019AA-1C75-4152-A78E-23C2F0191187}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prosper.Contracts", "Prosper.Contracts\Prosper.Contracts.csproj", "{F1889B83-9776-4352-8E97-16A92F5D0753}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4E39A98-DFCF-4513-9F73-0A41D56CE5C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4E39A98-DFCF-4513-9F73-0A41D56CE5C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4E39A98-DFCF-4513-9F73-0A41D56CE5C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4E39A98-DFCF-4513-9F73-0A41D56CE5C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4D019AA-1C75-4152-A78E-23C2F0191187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4D019AA-1C75-4152-A78E-23C2F0191187}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4D019AA-1C75-4152-A78E-23C2F0191187}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4D019AA-1C75-4152-A78E-23C2F0191187}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1889B83-9776-4352-8E97-16A92F5D0753}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1889B83-9776-4352-8E97-16A92F5D0753}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1889B83-9776-4352-8E97-16A92F5D0753}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1889B83-9776-4352-8E97-16A92F5D0753}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,14 @@
+C:\Code\ProsperManager\TestApp\bin\Debug\TestApp.exe.config
+C:\Code\ProsperManager\TestApp\bin\Debug\TestApp.exe
+C:\Code\ProsperManager\TestApp\bin\Debug\TestApp.pdb
+C:\Code\ProsperManager\TestApp\bin\Debug\ProsperLibrary.dll
+C:\Code\ProsperManager\TestApp\bin\Debug\ProsperLibrary.pdb
+C:\Code\ProsperManager\TestApp\obj\Debug\TestApp.csprojResolveAssemblyReference.cache
+C:\Code\ProsperManager\TestApp\obj\Debug\TestApp.exe
+C:\Code\ProsperManager\TestApp\obj\Debug\TestApp.pdb
+C:\Code\ProsperManager\TestApp\bin\Debug\Prosper.Contracts.dll
+C:\Code\ProsperManager\TestApp\bin\Debug\Newtonsoft.Json.dll
+C:\Code\ProsperManager\TestApp\bin\Debug\Prosper.Contracts.pdb
+C:\Code\ProsperManager\TestApp\bin\Debug\Newtonsoft.Json.xml
+C:\Code\ProsperManager\TestApp\bin\Debug\Ninject.dll
+C:\Code\ProsperManager\TestApp\bin\Debug\Ninject.xml

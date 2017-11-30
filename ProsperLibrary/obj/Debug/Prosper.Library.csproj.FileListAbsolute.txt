@@ -1,0 +1,11 @@
+C:\Code\ProsperManager\ProsperLibrary\bin\Debug\ProsperLibrary.dll
+C:\Code\ProsperManager\ProsperLibrary\bin\Debug\ProsperLibrary.pdb
+C:\Code\ProsperManager\ProsperLibrary\bin\Debug\Newtonsoft.Json.dll
+C:\Code\ProsperManager\ProsperLibrary\bin\Debug\Prosper.Contracts.dll
+C:\Code\ProsperManager\ProsperLibrary\bin\Debug\Prosper.Contracts.pdb
+C:\Code\ProsperManager\ProsperLibrary\bin\Debug\Newtonsoft.Json.xml
+C:\Code\ProsperManager\ProsperLibrary\obj\Debug\Prosper.Library.csprojResolveAssemblyReference.cache
+C:\Code\ProsperManager\ProsperLibrary\obj\Debug\ProsperLibrary.dll
+C:\Code\ProsperManager\ProsperLibrary\obj\Debug\ProsperLibrary.pdb
+C:\Code\ProsperManager\ProsperLibrary\bin\Debug\Ninject.dll
+C:\Code\ProsperManager\ProsperLibrary\bin\Debug\Ninject.xml

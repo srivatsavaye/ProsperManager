@@ -1,0 +1,5 @@
+C:\Code\ProsperManager\ProsperLibrary\bin\Debug\ProsperLibrary.dll
+C:\Code\ProsperManager\ProsperLibrary\bin\Debug\ProsperLibrary.pdb
+C:\Code\ProsperManager\ProsperLibrary\obj\Debug\ProsperLibrary.csprojResolveAssemblyReference.cache
+C:\Code\ProsperManager\ProsperLibrary\obj\Debug\ProsperLibrary.dll
+C:\Code\ProsperManager\ProsperLibrary\obj\Debug\ProsperLibrary.pdb

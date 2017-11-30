@@ -1,0 +1,5 @@
+C:\Code\ProsperManager\Prosper.Contracts\bin\Debug\Prosper.Contracts.dll
+C:\Code\ProsperManager\Prosper.Contracts\bin\Debug\Prosper.Contracts.pdb
+C:\Code\ProsperManager\Prosper.Contracts\obj\Debug\Prosper.Contracts.dll
+C:\Code\ProsperManager\Prosper.Contracts\obj\Debug\Prosper.Contracts.pdb
+C:\Code\ProsperManager\Prosper.Contracts\obj\Debug\Prosper.Contracts.csprojResolveAssemblyReference.cache
