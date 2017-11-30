@@ -43,6 +43,8 @@
     <Compile Include="Account.cs" />
     <Compile Include="AccountSettings.cs" />
     <Compile Include="AuthenticationToken.cs" />
+    <Compile Include="Listing.cs" />
+    <Compile Include="ListingFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -65,5 +65,27 @@ namespace ProsperLibrary
             return account;
         }
 
+
+        public async Task<ListingResult> GetListingsAsync(string accessToken, int limit)
+        {
+            var uri = $"{ _accountSettings.ListingsBaseUri}/listingsvc/v2/listings?limit={limit}";
+            var listings = new ListingResult();
+            try
+            {
+                var headers = new Dictionary<string, string>
+                {
+                    ["Authorization"] = $"Bearer {accessToken}"
+                };
+
+                listings = await _client.Get<ListingResult>(uri, headers, _jsonSerializerSettings);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+
+            return listings;
+        }
+
     }
 }

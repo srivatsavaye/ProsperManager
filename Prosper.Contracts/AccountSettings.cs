@@ -13,5 +13,6 @@ namespace Prosper.Contracts
         public string Username { get; set; }
         public string Password { get; set; }
         public string BaseUri { get; set; }
+        public string ListingsBaseUri { get; set; }
     }
 }
