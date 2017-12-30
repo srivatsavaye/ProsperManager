@@ -14,6 +14,7 @@ namespace Prosper.Contracts
         public List<string> LoanCategories { get; set; }
         public Range ProsperScore { get; set; }
         public List<string> CreditScores { get; set; }
+        public int Priority { get; set; }
     }
 
 

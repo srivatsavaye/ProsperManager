@@ -9,3 +9,4 @@ C:\Code\ProsperManager\ProsperLibrary\obj\Debug\ProsperLibrary.dll
 C:\Code\ProsperManager\ProsperLibrary\obj\Debug\ProsperLibrary.pdb
 C:\Code\ProsperManager\ProsperLibrary\bin\Debug\Ninject.dll
 C:\Code\ProsperManager\ProsperLibrary\bin\Debug\Ninject.xml
+C:\Code\ProsperManager\ProsperLibrary\bin\Debug\Microsoft.Web.XmlTransform.dll

@@ -18,7 +18,7 @@ namespace TestApp
         static void Main(string[] args)
         {
             SetJsonSerializationSettings();
-            NewMethod(GetSettings());
+            //NewMethod(GetSettings());
         }
 
         private static void SetJsonSerializationSettings()
@@ -27,50 +27,50 @@ namespace TestApp
             { ContractResolver = new DefaultContractResolver() { NamingStrategy = new SnakeCaseNamingStrategy() } };
         }
 
-        private static AccountSettings GetSettings()
-        {
-            var accountSettings = ReadFile(ConfigurationManager.AppSettings["AccountFileLocation"].ToString());
-            accountSettings.BaseUri = ConfigurationManager.AppSettings["BaseUri"].ToString();
-            accountSettings.ListingsBaseUri = ConfigurationManager.AppSettings["ListingsBaseUri"].ToString();
-            return accountSettings;
-        }
+        //private static AccountSetting GetSettings()
+        //{
+        //    var accountSettings = ReadFile(ConfigurationManager.AppSettings["AccountFileLocation"].ToString());
+        //    accountSettings.BaseUri = ConfigurationManager.AppSettings["BaseUri"].ToString();
+        //    accountSettings.ListingsBaseUri = ConfigurationManager.AppSettings["ListingsBaseUri"].ToString();
+        //    return accountSettings;
+        //}
 
-        private static AccountSettings ReadFile(string accountFileLocation)
-        {
-            if (File.Exists(accountFileLocation))
-            {
-                return JsonConvert.DeserializeObject<AccountSettings>(File.ReadAllText(accountFileLocation), _jsonSerializerSettings);
-            }
-            return null;
-        }
+        //private static AccountSetting ReadFile(string accountFileLocation)
+        //{
+        //    if (File.Exists(accountFileLocation))
+        //    {
+        //        return JsonConvert.DeserializeObject<AccountSetting>(File.ReadAllText(accountFileLocation), _jsonSerializerSettings);
+        //    }
+        //    return null;
+        //}
 
-        private static void NewMethod(AccountSettings accountSettings)
-        {
-            AuthenticationToken authenticationToken;
-            var pClient = new ProsperClient(new Client(), accountSettings, _jsonSerializerSettings);
-            var resp = pClient.AuthenticateAsync();
-            resp.Wait();
+        //private static void NewMethod(AccountSetting accountSettings)
+        //{
+        //    AuthenticationToken authenticationToken;
+        //    var pClient = new ProsperClient(new Client(), accountSettings, _jsonSerializerSettings);
+        //    var resp = pClient.AuthenticateAsync();
+        //    resp.Wait();
 
-            authenticationToken = resp.Result;
+        //    authenticationToken = resp.Result;
 
-            var listings = pClient.GetListingsAsync(authenticationToken.AccessToken, 500);
+        //    var listings = pClient.GetListingsAsync(authenticationToken.AccessToken, 500);
 
-            listings.Wait();
+        //    listings.Wait();
 
-            var filter = Get36M_01Filter();
-            filter = Get36M_04Filter();
-            var listingsFilteredBy1 = listings.Result.Result.Where(
-                l => l.ProsperRating == filter.Rating
-                && l.ListingTerm == filter.Term
-                && l.ProsperScore >= filter.ProsperScore.From
-                && l.ProsperScore <= filter.ProsperScore.To
-                && filter.CreditScores.Contains(l.CreditBureauValuesTransunionIndexed.FicoScore)
-                ).ToList();
+        //    var filter = Get36M_01Filter();
+        //    filter = Get36M_04Filter();
+        //    var listingsFilteredBy1 = listings.Result.Result.Where(
+        //        l => l.ProsperRating == filter.Rating
+        //        && l.ListingTerm == filter.Term
+        //        && l.ProsperScore >= filter.ProsperScore.From
+        //        && l.ProsperScore <= filter.ProsperScore.To
+        //        && filter.CreditScores.Contains(l.CreditBureauValuesTransunionIndexed.FicoScore)
+        //        ).ToList();
 
-            //var accont = pClient.GetAccountAsync(authenticationToken.AccessToken);
+        //    //var accont = pClient.GetAccountAsync(authenticationToken.AccessToken);
 
-            //accont.Wait();
-        }
+        //    //accont.Wait();
+        //}
 
         private static ListingFilter Get36M_01Filter()
         {

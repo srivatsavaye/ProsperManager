@@ -12,3 +12,4 @@ C:\Code\ProsperManager\TestApp\bin\Debug\Prosper.Contracts.pdb
 C:\Code\ProsperManager\TestApp\bin\Debug\Newtonsoft.Json.xml
 C:\Code\ProsperManager\TestApp\bin\Debug\Ninject.dll
 C:\Code\ProsperManager\TestApp\bin\Debug\Ninject.xml
+C:\Code\ProsperManager\TestApp\bin\Debug\Microsoft.Web.XmlTransform.dll

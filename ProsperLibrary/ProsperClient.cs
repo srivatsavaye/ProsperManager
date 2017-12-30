@@ -12,24 +12,24 @@ using System.Threading.Tasks;
 
 namespace ProsperLibrary
 {
-    public class ProsperClient
+    public class ProsperClient : IProsperClient
     {
         private readonly JsonSerializerSettings _jsonSerializerSettings;
-        private readonly AccountSettings _accountSettings;
+        private readonly AppSettings _settings;
         private readonly IClient _client;
 
-        public ProsperClient(IClient client, AccountSettings accountSettings, JsonSerializerSettings jsonSerializerSettings)
+        public ProsperClient(IClient client, AppSettings settings, JsonSerializerSettings jsonSerializerSettings)
         {
             _client = client;
             ServicePointManager.Expect100Continue = true;
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             _jsonSerializerSettings = jsonSerializerSettings;
-            _accountSettings = accountSettings;
+            _settings = settings;
         }
 
-        public async Task<AuthenticationToken> AuthenticateAsync()
+        public async Task<AuthenticationToken> AuthenticateAsync(AccountSetting setting)
         {
-            var uri = $"{_accountSettings.BaseUri}/security/oauth/token?grant_type=password&client_id={_accountSettings.ClientId}&client_secret={_accountSettings.ClientSecret}&username={_accountSettings.Username}&password={_accountSettings.Password}";
+            var uri = $"{_settings.BaseUri}/security/oauth/token?grant_type=password&client_id={setting.ClientId}&client_secret={setting.ClientSecret}&username={setting.Username}&password={setting.Password}";
             var authenticationToken = new AuthenticationToken();
             try
             {
@@ -46,7 +46,7 @@ namespace ProsperLibrary
 
         public async Task<Account> GetAccountAsync(string accessToken)
         {
-            var uri = $"{ _accountSettings.BaseUri}/accounts/prosper";
+            var uri = $"{ _settings.BaseUri}/accounts/prosper";
             var account = new Account();
             try
             {
@@ -68,7 +68,7 @@ namespace ProsperLibrary
 
         public async Task<ListingResult> GetListingsAsync(string accessToken, int limit)
         {
-            var uri = $"{ _accountSettings.ListingsBaseUri}/listingsvc/v2/listings?limit={limit}";
+            var uri = $"{ _settings.ListingsBaseUri}/listingsvc/v2/listings?limit={limit}&invested=false&biddable=true";
             var listings = new ListingResult();
             try
             {

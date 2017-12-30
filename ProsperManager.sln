@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prosper.Contracts", "Prosper.Contracts\Prosper.Contracts.csproj", "{F1889B83-9776-4352-8E97-16A92F5D0753}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prosper.Service", "Prosper.Service\Prosper.Service.csproj", "{F9DD23FE-FDEE-4984-8A82-51DBCA0DEA3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F1889B83-9776-4352-8E97-16A92F5D0753}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1889B83-9776-4352-8E97-16A92F5D0753}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1889B83-9776-4352-8E97-16A92F5D0753}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9DD23FE-FDEE-4984-8A82-51DBCA0DEA3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9DD23FE-FDEE-4984-8A82-51DBCA0DEA3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9DD23FE-FDEE-4984-8A82-51DBCA0DEA3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9DD23FE-FDEE-4984-8A82-51DBCA0DEA3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,15 +8,20 @@ namespace Prosper.Contracts
 {
     public class AuthenticationToken
     {
-        private readonly DateTime _createdDate;
-        public AuthenticationToken()
-        {
-            _createdDate = DateTime.UtcNow;
-        }
+        private DateTime _createdDate;
         public string AccessToken { get; set; }
         public string TokenType { get; set; }
         public string RefreshToken { get; set; }
-        public int ExpiresIn { get; set; }
+        private int _expiresIn;
+        public int ExpiresIn
+        {
+            get { return _expiresIn; }
+            set
+            {
+                _createdDate = DateTime.UtcNow;
+                _expiresIn = value;                
+            }
+        }
         public bool Expired { get { return (DateTime.UtcNow - _createdDate).Seconds > ExpiresIn; } }
     }
 }
