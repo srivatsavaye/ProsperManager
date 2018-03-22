@@ -3,3 +3,9 @@ C:\Code\ProsperManager\Prosper.Contracts\bin\Debug\Prosper.Contracts.pdb
 C:\Code\ProsperManager\Prosper.Contracts\obj\Debug\Prosper.Contracts.dll
 C:\Code\ProsperManager\Prosper.Contracts\obj\Debug\Prosper.Contracts.pdb
 C:\Code\ProsperManager\Prosper.Contracts\obj\Debug\Prosper.Contracts.csprojResolveAssemblyReference.cache
+C:\CodeMine\ProsperManager\Prosper.Contracts\bin\Debug\Prosper.Contracts.dll
+C:\CodeMine\ProsperManager\Prosper.Contracts\bin\Debug\Prosper.Contracts.pdb
+C:\CodeMine\ProsperManager\Prosper.Contracts\obj\Debug\Prosper.Contracts.csproj.CoreCompileInputs.cache
+C:\CodeMine\ProsperManager\Prosper.Contracts\obj\Debug\Prosper.Contracts.dll
+C:\CodeMine\ProsperManager\Prosper.Contracts\obj\Debug\Prosper.Contracts.pdb
+C:\CodeMine\ProsperManager\Prosper.Contracts\obj\Debug\Prosper.Contracts.csprojResolveAssemblyReference.cache

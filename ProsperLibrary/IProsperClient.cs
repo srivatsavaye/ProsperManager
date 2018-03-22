@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Prosper.Contracts;
 
 namespace ProsperLibrary
@@ -8,5 +9,6 @@ namespace ProsperLibrary
         Task<AuthenticationToken> AuthenticateAsync(AccountSetting setting);
         Task<Account> GetAccountAsync(string accessToken);
         Task<ListingResult> GetListingsAsync(string accessToken, int limit);
+        Task<bool> OrderAsync(string accessToken, long listingId, double amount);
     }
 }

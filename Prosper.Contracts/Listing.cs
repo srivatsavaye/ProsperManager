@@ -16,11 +16,19 @@ namespace Prosper.Contracts
         public string ListingTitle { get; set; }
         public double AmountRemaining { get; set; }
 
+        public override string ToString()
+        {
+            return $"ListingNumber:{ListingNumber} ProsperRating:{ProsperRating} ListingTerm:{ListingTerm} ProsperScore:{ProsperScore} CreditBureau:{CreditBureauValuesTransunionIndexed} ListingTitle:{ListingTitle} AmountRemaining:{AmountRemaining} ";
+        }
     }
 
     public class CreditBureau
     {
         public string FicoScore { get; set; }
+        public override string ToString()
+        {
+            return $"FicoScore:{FicoScore}"; 
+        }
     }
 
     public class ListingResult

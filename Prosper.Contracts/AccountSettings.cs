@@ -18,6 +18,6 @@ namespace Prosper.Contracts
     {
         public string BaseUri { get; set; }
         public string ListingsBaseUri { get; set; }
-
+        public double BidAmount { get; set; }
     }
 }

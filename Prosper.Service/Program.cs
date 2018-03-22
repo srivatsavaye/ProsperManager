@@ -14,12 +14,17 @@ namespace Prosper.Service
         /// </summary>
         static void Main()
         {
+#if DEBUG
+            var service = new ProsperService();
+            service.OnDebug();
+#else
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
                 new ProsperService()
             };
             ServiceBase.Run(ServicesToRun);
+#endif
         }
     }
 }

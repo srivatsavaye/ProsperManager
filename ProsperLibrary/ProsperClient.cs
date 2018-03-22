@@ -87,5 +87,26 @@ namespace ProsperLibrary
             return listings;
         }
 
+        public async Task<bool> OrderAsync(string accessToken, long listingId, double amount)
+        {
+            var uri = $"{ _settings.ListingsBaseUri}//orders";
+            var body = $"{{\"bid_requests\": [{{\"listing_id\":{listingId}, \"bid_amount\":{amount}}}]}}";
+            try
+            {
+                var headers = new Dictionary<string, string>
+                {
+                    ["Authorization"] = $"Bearer {accessToken}"
+                };
+
+                var result = await _client.Post<Object>(uri, headers, body, _jsonSerializerSettings);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+
+            return true;
+        }
+
     }
 }

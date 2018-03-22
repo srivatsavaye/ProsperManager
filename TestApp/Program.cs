@@ -18,7 +18,8 @@ namespace TestApp
         static void Main(string[] args)
         {
             SetJsonSerializationSettings();
-            //NewMethod(GetSettings());
+            //NewMethod(GetAccountSettings(), GetAppSettings());
+            var manager = new ProsperManager(_jsonSerializerSettings);
         }
 
         private static void SetJsonSerializationSettings()
@@ -27,50 +28,54 @@ namespace TestApp
             { ContractResolver = new DefaultContractResolver() { NamingStrategy = new SnakeCaseNamingStrategy() } };
         }
 
-        //private static AccountSetting GetSettings()
-        //{
-        //    var accountSettings = ReadFile(ConfigurationManager.AppSettings["AccountFileLocation"].ToString());
-        //    accountSettings.BaseUri = ConfigurationManager.AppSettings["BaseUri"].ToString();
-        //    accountSettings.ListingsBaseUri = ConfigurationManager.AppSettings["ListingsBaseUri"].ToString();
-        //    return accountSettings;
-        //}
+        private static List<AccountSetting> GetAccountSettings()
+        {
+            var accountSettings = ReadFile(ConfigurationManager.AppSettings["AccountFileLocation"].ToString());
+            return accountSettings;
+        }
 
-        //private static AccountSetting ReadFile(string accountFileLocation)
-        //{
-        //    if (File.Exists(accountFileLocation))
-        //    {
-        //        return JsonConvert.DeserializeObject<AccountSetting>(File.ReadAllText(accountFileLocation), _jsonSerializerSettings);
-        //    }
-        //    return null;
-        //}
+        private static AppSettings GetAppSettings()
+        {
+           
+            return new AppSettings(){BaseUri = ConfigurationManager.AppSettings["BaseUri"] , ListingsBaseUri = ConfigurationManager.AppSettings["ListingsBaseUri"] };
+        }
 
-        //private static void NewMethod(AccountSetting accountSettings)
-        //{
-        //    AuthenticationToken authenticationToken;
-        //    var pClient = new ProsperClient(new Client(), accountSettings, _jsonSerializerSettings);
-        //    var resp = pClient.AuthenticateAsync();
-        //    resp.Wait();
+        private static List<AccountSetting> ReadFile(string accountFileLocation)
+        {
+            if (File.Exists(accountFileLocation))
+            {
+                return JsonConvert.DeserializeObject<List<AccountSetting>>(File.ReadAllText(accountFileLocation), _jsonSerializerSettings);
+            }
+            return null;
+        }
 
-        //    authenticationToken = resp.Result;
+        private static void NewMethod(List<AccountSetting> accountSettings, AppSettings appSettings)
+        {
+            AuthenticationToken authenticationToken;
+            var pClient = new ProsperClient(new Client(), appSettings, _jsonSerializerSettings);
+            var resp = pClient.AuthenticateAsync(accountSettings[0]);
+            resp.Wait();
 
-        //    var listings = pClient.GetListingsAsync(authenticationToken.AccessToken, 500);
+            authenticationToken = resp.Result;
 
-        //    listings.Wait();
+            var listings = pClient.GetListingsAsync(authenticationToken.AccessToken, 500);
 
-        //    var filter = Get36M_01Filter();
-        //    filter = Get36M_04Filter();
-        //    var listingsFilteredBy1 = listings.Result.Result.Where(
-        //        l => l.ProsperRating == filter.Rating
-        //        && l.ListingTerm == filter.Term
-        //        && l.ProsperScore >= filter.ProsperScore.From
-        //        && l.ProsperScore <= filter.ProsperScore.To
-        //        && filter.CreditScores.Contains(l.CreditBureauValuesTransunionIndexed.FicoScore)
-        //        ).ToList();
+            listings.Wait();
 
-        //    //var accont = pClient.GetAccountAsync(authenticationToken.AccessToken);
+            var filter = Get36M_01Filter();
+            filter = Get36M_04Filter();
+            var listingsFilteredBy1 = listings.Result.Result.Where(
+                l => l.ProsperRating == filter.Rating
+                && l.ListingTerm == filter.Term
+                && l.ProsperScore >= filter.ProsperScore.From
+                && l.ProsperScore <= filter.ProsperScore.To
+                && filter.CreditScores.Contains(l.CreditBureauValuesTransunionIndexed.FicoScore)
+                ).ToList();
 
-        //    //accont.Wait();
-        //}
+            //var accont = pClient.GetAccountAsync(authenticationToken.AccessToken);
+
+            //accont.Wait();
+        }
 
         private static ListingFilter Get36M_01Filter()
         {

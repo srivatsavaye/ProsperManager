@@ -15,9 +15,13 @@ namespace Prosper.Contracts
         public Range ProsperScore { get; set; }
         public List<string> CreditScores { get; set; }
         public int Priority { get; set; }
+        public override string ToString()
+        {
+            return
+                $"Name:{Name} Rating:{Rating} Term:{Term} ProsperScore:{ProsperScore.From}-{ProsperScore.To} CreditScores:{string.Join(",", CreditScores)}";
+        }
     }
-
-
+    
     public class Range
     {
         public Range(int from, int to)
@@ -27,5 +31,9 @@ namespace Prosper.Contracts
         }
         public int From { get; set; }
         public int To { get; set; }
+        public override string ToString()
+        {
+            return $"From:{From}-To:{To}"; 
+        }
     }
 }

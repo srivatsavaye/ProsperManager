@@ -1,0 +1,18 @@
+﻿{
+  "Priority" : 1,
+  "Rating" : 
+  "HR",
+  "Term" :
+  36,
+  "LoanCategories" :
+  null,
+  "ProsperScore" :
+  "new" "Range(3",
+  "5)",
+  "CreditScores" :
+  "new" "List<string>",
+  {
+    "640-659",
+    "680-699"
+  }
+}
